@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de layout</title>
+    <style>
+        #grid{
+            display: grid;
+            grid-template: auto, 1fr, auto / auto 1fr;
+
+            height: 600px;
+            border: 2px dashed blue;
+        }
+
+        #title{
+            grid-column: 1;
+            grid-row: 1;
+
+            border: 1px dashed red;
+        }
+        #score{
+            grid-column: 1;
+            grid-row: 3;
+            border: 1px dashed red;
+
+        }
+        #stats{
+            grid-column: 1;
+            grid-row: 2;
+            align-self: start;
+            border: 1px dashed red;
+
+
+        }
+        #board{
+            grid-column: 2;
+            grid-row: 1/ span 2;
+            border: 1px dashed red;
+
+
+        }
+
+        #controls{
+            grid-column: 2;
+            grid-row: 3;
+            justify-self: center;
+            border: 1px dashed red;
+
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+        <div id="grid">
+            <div id="title">Game Title</div>
+            <div id="score">Score</div>
+            <div id="stats">Stats</div>
+            <div id="board">Board</div>
+            <div id="controls">Controls</div>
+        </div>
+    </main>
+</body>
+</html>
